@@ -1,0 +1,27 @@
+
+
+##### 16/08/2022 #####	
+
+1. Learned about Array in JS.
+2. Creating Array in JS.
+3. Basic Array Operations.
+    -Push
+    -Unshift
+    -Pop
+    -Shift
+    -Changing elements using array index
+4. Different Methods of Array in JS
+    -indexOf
+    -lastIndexOf
+    -includes
+    -find
+    -concat
+    -join
+    -split
+    -splice
+    -filter
+    -map
+5. Created JS programs to demonstrate following
+    -create an array using different Methods
+    -remove, add, delete elements inside an array using inbuilt functions
+    -
