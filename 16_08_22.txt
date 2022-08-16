@@ -24,4 +24,7 @@
 5. Created JS programs to demonstrate following
     -create an array using different Methods
     -remove, add, delete elements inside an array using inbuilt functions
-    -
+    -accessing array elements using array index
+    -using different array manipulation Methods
+    -Removing duplicate elements from the given array and adding them into a new array
+    -create child arrays from one parent array, with child arrays having different conditions.
