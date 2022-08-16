@@ -1,5 +1,5 @@
 
-
+##### Yatharth Thaker - Intern #####
 ##### 16/08/2022 #####	
 
 1. Learned about Array in JS.
