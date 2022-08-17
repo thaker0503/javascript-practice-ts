@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>People Counter App</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 50%;
+            height: 60vh;
+            background-color: rgba(230, 237, 243, 0.719);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.849);
+        }
+        .btn-wrapper{
+            display: flex;
+            width: 70%;
+            height: 50px;
+            padding: .3em .5em;
+            justify-content: space-evenly;
+        }
+        button {
+            border: none;
+            width: 45%;
+            font-size: 18px;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            color: rgb(22, 22, 22);
+            background-color: rgba(98, 98, 245, 0.733);
+            border: 1px solid rgba(255, 255, 255, 0.849);
+        }
+        #count{
+            height: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+            
+        }
+        button:hover {
+            background-color: rgba(208, 243, 231, 0.678);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>People Entered:</h1>
+        <span id="count"></span>
+        <div class="btn-wrapper">
+            <button id="increment">INCREMENT</button>
+            <button id="save">SAVE</button>
+        </div>
+        <h3>Previous Enteries:</h3>
+        <span id="previous"></span>
+    </div>
+
+
+
+    <script>
+        const count = document.getElementById('count');
+        const inc = document.getElementById('increment');
+        const save = document.getElementById('save');
+        const previous = document.getElementById('previous');
+        let countValue = 0;
+        const array = []
+        const arrFor = []
+        inc.addEventListener('click', () => {
+            countValue++;
+            count.innerHTML = countValue;
+        }); 
+        save.addEventListener('click', () => {
+            array.push(countValue);
+            console.log("Using Push() ==>")
+            console.log(array)
+            console.log("Using ForEach ==>")
+            arrFor.forEach((ev) => ev = countValue)
+            console.log(arrFor)
+            previous.innerHTML += countValue;
+        });
+        
+
+
+
+        
+    </script>
+</body>
+</html>
