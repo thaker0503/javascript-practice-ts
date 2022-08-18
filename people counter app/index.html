@@ -60,18 +60,93 @@
         button:hover {
             background-color: rgba(208, 243, 231, 0.678);
         }
+        h3{
+            font-size: 20px;
+            color: rgb(22, 22, 22);
+        }
+        .output{
+            padding: 1em 2em;
+            flex-direction: column;
+            width: 50%;
+            height: 20vh;
+            background-color: rgba(230, 237, 243, 0.719);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.849);
+            overflow: hidden scroll;
+            
+        }
+        .output::-webkit-scrollbar{
+            display: none;
+        }
+        #previous{
+            width: 50%;
+            height: 25%;
+            font-size: 20px;
+            color: rgb(22, 22, 22);
+        }
+        .list{
+            
+            width: 100%;
+            font-size: 20px;
+            color: rgb(22, 22, 22);
+           
+        }
+        .list-span{
+            width: 25px;
+            margin: 0;
+        }
+        @media screen and (max-width: 768px){
+            .container{
+                width: 70%;
+                height: 60vh;
+            }
+            .btn-wrapper{
+                width: 100%;
+            }
+            button{
+                width: 100%;
+            }
+            #count{
+                font-size: 30px;
+            }
+            .output{
+                width: 80%;
+                height: 30vh;
+                margin: 1em 2em;
+                
+            }
+            h1{
+                margin: auto;
+            }
+            h3{
+                font-size: 20px;
+                margin: auto;
+            }
+            #previous{
+                width: 100%;
+                height: 60vh;
+            }
+            .list{
+                font-size: 11px;
+            }
+        }
+            
+        
     </style>
 </head>
 <body>
     <div class="container">
         <h1>People Entered:</h1>
-        <span id="count"></span>
+        <span id="count">0</span>
         <div class="btn-wrapper">
             <button id="increment">INCREMENT</button>
             <button id="save">SAVE</button>
         </div>
         <h3>Previous Enteries:</h3>
-        <span id="previous"></span>
+        <div class="output">
+            <span id="previous"></span>
+        </div>
+
     </div>
 
 
@@ -88,14 +163,31 @@
             countValue++;
             count.innerHTML = countValue;
         }); 
+
+        //Version 0.1.0
+        // save.addEventListener('click', () => {
+        //     array.push(countValue);
+        //     console.log("Using Push() ==>")
+        //     console.log(array)
+        //     previous.innerHTML += countValue + '-';
+        //     countValue = 0;
+        //     count.innerHTML = countValue;
+        // });
+
+        //Version 0.2.0
         save.addEventListener('click', () => {
-            array.push(countValue);
-            console.log("Using Push() ==>")
-            console.log(array)
-            console.log("Using ForEach ==>")
-            arrFor.forEach((ev) => ev = countValue)
-            console.log(arrFor)
-            previous.innerHTML += countValue + '-';
+            //create a new array and push the countValue to it
+            arrFor.push(countValue);
+            //create a condition to display single digit numbers with a 0 in front of it of countValue is less than 10
+            if(countValue < 10){
+                previous.innerHTML += `<li class="list">0${countValue} - ${new Date().toLocaleString()}</li>`;
+            }else{
+                previous.innerHTML += `<li class="list">${countValue} - ${new Date().toLocaleString()}</li>`;
+            }
+            //print the array in previous span with current date and time as a list
+            
+            countValue = 0;
+            count.innerHTML = countValue;
         });
         
 
