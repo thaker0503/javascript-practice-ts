@@ -1,12 +1,14 @@
 
-##### Yatharth Thaker - Intern #####
-##### 18/08/2022 #####	
 
-1. Created a People Counter App in HTML, CSS & JS
-2  Learned about Expressions and Literals in JS
-3. Implemented them in the People Counter App
-4. Also Learned about password protection to static web pages and implemented it in the app.
-5. Check out the application on: 
-	https://thaker0503.github.io/people-counter-app/
-	
-	Password: 000000
+##### 26/08/2022 #####	
+
+1. R&D on different types of form validations in js
+   - Server side Validation
+   - Client side Validation
+   - Real-time Validation
+   
+2. Added filters in localStorage Application
+   - low to High
+   - High to low
+
+3. Added search bar to it and created popUp to display the searched items.
