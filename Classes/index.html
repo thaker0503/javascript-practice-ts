@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | JS Classes</title>
+    <link rel="stylesheet" href="./products.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="products.js" defer></script>
+</head>
+<body>
+    <div class="header">
+        <h1>Products</h1>
+        <div class="alert">
+        </div>
+    </div>
+    <form>
+        <h3>Add new product</h3>
+        <label for="prodName">Product Name:</label>
+        <input type="text" name="prodName" id="prodName" />
+        <label for="prodPrice">Product Price:</label>
+        <input type="text" name="prodPrice" id="prodPrice" />
+        <label for="prodId">Product ID:</label>
+        <input type="text" name="prodId" id="prodId" />
+        <button id="submitBtn">Submit</button>
+    </form>
+    <div class="result">
+        <table id="result">
+            <thead>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Price</th>
+            </thead>
+            
+        </table>
+    </div>
+</body>
+</html>
